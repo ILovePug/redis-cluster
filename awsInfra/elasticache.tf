@@ -68,8 +68,8 @@ resource "aws_elasticache_replication_group" "default" {
   # num_cache_clusters          = 2 # for cluster disabled setup replicas
   node_type            = "cache.t4g.micro"
   port                 = 6379
-  parameter_group_name = "default.redis7.cluster.on"
-  # parameter_group_name = "default.redis7"
+  parameter_group_name = "default.redis7"
+  engine_version       = "7.0"
   security_group_ids   = ["${aws_security_group.default.id}"]
   # snapshot_retention_limit = 5
   # snapshot_window          = "00:00-05:00"
